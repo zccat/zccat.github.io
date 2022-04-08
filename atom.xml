@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ziir.cc</id>
     <title>Gridea</title>
-    <updated>2022-04-08T08:33:50.397Z</updated>
+    <updated>2022-04-08T08:44:23.704Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ziir.cc"/>
     <link rel="self" href="https://ziir.cc/atom.xml"/>
@@ -42,20 +42,20 @@
 <p><code>checksum</code> 用来检查 migration 在执行过后是否发生了变化，如果发生了变化，会导致这个版本以及后续版本的 migration 无法执行。</p>
 <h3 id="undo-migration">Undo Migration</h3>
 <p>Versioned migration 中，还有一种特殊的类型 undo migration，可为对应版本的常规 versioned migration 进行回退操作，命名方式如下：</p>
-<figure data-type="image" tabindex="2"><img src="D:%5C%E5%9D%9A%E6%9E%9C%E4%BA%91%5CTypora%E7%AC%94%E8%AE%B0%5CFlyWay.assets/webp-164206349195118.webp" alt="img" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://ziir.cc/post-images/1649407420006.webp" alt="" loading="lazy"></figure>
 <p>Undo Migration</p>
 <blockquote>
 <p>此功能为收费功能，在社区版 Flyway 中无法使用。</p>
 </blockquote>
 <h3 id="repeatable-migration">Repeatable Migration</h3>
 <p>Repeatable migration 包括描述和校验值，没有版本号信息，会在每次校验值（migration 内容变化会导致校验值变化）发生变化时重复执行，命名方式如下：</p>
-<figure data-type="image" tabindex="3"><img src="D:%5C%E5%9D%9A%E6%9E%9C%E4%BA%91%5CTypora%E7%AC%94%E8%AE%B0%5CFlyWay.assets/webp-164206350652922.webp" alt="img" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://ziir.cc/post-images/1649407429615.webp" alt="" loading="lazy"></figure>
 <p>Repeatable Migration</p>
 <p>Repeatable migration 会在所有的 versioned migration 都执行过后再进行执行，Repeatable migration 内部按照其文件名中描述（description）部分的顺序执行。</p>
 <p>在 repeatable migration 中需保证其中内容可重复执行，比如在 DDL 中使用 <code>CREATE OR REPLACE</code>。</p>
 <h3 id="baseline">Baseline</h3>
 <p>当数据中已经存在内容时，再引入 Flyway，可通过 Baseline 设定一条基线。</p>
-<figure data-type="image" tabindex="4"><img src="D:%5C%E5%9D%9A%E6%9E%9C%E4%BA%91%5CTypora%E7%AC%94%E8%AE%B0%5CFlyWay.assets/webp-164206351377224.webp" alt="img" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://ziir.cc/post-images/1649407436534.webp" alt="" loading="lazy"></figure>
 <p>Baselineg</p>
 <p>如果想将基线之前的数据库中表结构和数据纳入 Flyway 一同管理，可以将基线前的状态导出成数据库脚本，通过 versioned migration 添加至 flyway 中，并设定 baselin version，Flyway 会忽略基线版本号（包括）之前版本的所有 migration。</p>
 <p>如果不想管理基线之前的数据库状态（比如多模块或应用操作同一数据库，互相之间不受影响），可以只告诉 Flyway 执行 migration 的时候是存在基线的，这样就不会报出数据库非空的异常。</p>
