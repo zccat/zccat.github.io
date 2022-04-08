@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://ziir.cc</id>
+    <id>https://zccat.github.io</id>
     <title>Gridea</title>
-    <updated>2022-04-08T07:34:11.703Z</updated>
+    <updated>2022-04-08T07:35:14.471Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://ziir.cc"/>
-    <link rel="self" href="https://ziir.cc/atom.xml"/>
+    <link rel="alternate" href="https://zccat.github.io"/>
+    <link rel="self" href="https://zccat.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://ziir.cc/images/avatar.png</logo>
-    <icon>https://ziir.cc/favicon.ico</icon>
+    <logo>https://zccat.github.io/images/avatar.png</logo>
+    <icon>https://zccat.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Gridea</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://ziir.cc/post/hello-gridea/</id>
-        <link href="https://ziir.cc/post/hello-gridea/">
+        <id>https://zccat.github.io/post/hello-gridea/</id>
+        <link href="https://zccat.github.io/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
